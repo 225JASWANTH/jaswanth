@@ -1,268 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>portfolio site</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <link rel="stylesheet" href="css/style.css">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Portfolio - M.V. Jaswanth</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+      }
+      .navbar {
+        background-color: #343a40;
+        padding: 1rem;
+      }
+      .navbar-brand {
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #fff;
+        animation: flash 1s infinite;
+      }
+      @keyframes flash {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #444;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+      .banner {
+        background-image: url('images/bgimg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+      }
+      .banner h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      .banner p {
+        font-size: 1.2rem;
+      }
+      .content-section {
+        padding: 4rem 2rem;
+      }
+      .card {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      footer {
+        background-color: #343a40;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
+    </style>
   </head>
   <body>
-
-
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand animate__animated animate__flash animate__infinite" href="#">M.v.Jaswanth</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link " href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#project">Projects/Internships</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<section  id="home">
-  <img src="images\bgimg.jpg" class="bannerBgImage" alt="bgimg">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 bannerText">
-        <h2 class="bannerTitle animate__animated animate__lightSpeedInRight">Hello!</h2>
-        <p class="bannerDesc">I am a electrical engineer</p>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand animate__animated animate__flash" href="#">M.V. Jaswanth</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </div>
+    </nav>
 
-</section>
+    <section class="banner" id="home">
+      <h1>Hello, I'm M.V. Jaswanth</h1>
+      <p>A Passionate Electrical Engineer</p>
+    </section>
 
-<section data-aos="zoom-out">
-    <div class="container" id="about">
-        <h1 class="text-center">About me</h1>
+    <section class="content-section" id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="container">
         <div class="row">
-            <div class="col-md-4" data-aos="fade-down-right">
-                <img src="images\profile.jpg" alt="profile" class="card-img img-fluid">
-            </div>
-
-            <div class="col-md-8">
-                
-
-                <div class="row">
-                    <div class="col-md-8">
-                        <ul>
-                            <li>NAME : M.V. JASWANTH</li>
-                            <br>
-                            <li>AGE : 21</li>
-                            <br>
-                            <li>OCCUPATION : STUDENT</li>
-                            <br>
-                            <li>COLLEGE : PRAKASAM ENGINEERING COLLEGE</li>
-                            <br>
-                            <li>BRANCH : ELECTRICAL AND ELECTRONICS ENGINEERING</li>
-                            <br>
-                            <li>EDUCATIONAL DETAILS :
-                              <br>
-                              <i><i class="bi bi-arrow-right-short"></i>Pursing B.tech in prakasam engineering college,kandukur
-                                (In the stream of Electrical and Electronics Engineering ).
-                              </i>
-                              <br>
-                              <i><i class="bi bi-arrow-right-short"></i>Completed intermediate in narayana junior college,kandukur
-                                (In the year of 2018-2020).
-                              </i>
-                              <br>
-                              <i><i class="bi bi-arrow-right-short"></i>I had done my schooling in narayana E-techno school,kandukur.
-                              
-                              </i>
-                              
-                            </li>
-                            <br>
-                            <li>TECHNICAL DETAILS AND ACHIEVEMENTS :
-                              <br>
-                              <i><i class="bi bi-arrow-right-short"></i>I know some electrical circuit designings.
-                              </i>
-                              <br>
-                              <i><i class="bi bi-arrow-right-short"></i>I achieved a NPTEL certificate which was conducted by SWAYAM NPTEL on completion of course "principles of electrical science"
-                              </i>
-
-
-                            </li>
-                          
-                        </ul>
-                
-
-                    </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-    </div>
-</section>
-
-<section data-aos="flip-left">
-  <div class="container" id="project">
-    <h1 class="text-center">Projects/Internships</h1>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card w-100 mb-3">
-          <img src="images\ev image.webp" class="card-img-top" alt="ev image">
-          <div class="card-body">
-            <h5 class="card-title text-center"><i class="bi bi-1-circle"></i>ELECTRIC VEHICLES</h5>
-            <p class="card-text">I done the internship on various types of electrical vehicle  under HIEE company,hyderabad </p>
+          <div class="col-md-4" data-aos="fade-right">
+            <img src="images/profile.jpg" class="img-fluid rounded-circle" alt="Profile">
+          </div>
+          <div class="col-md-8" data-aos="fade-left">
+            <p>I am a student pursuing B.Tech in Electrical and Electronics Engineering at Prakasam Engineering College. Passionate about electrical systems, circuit design, and emerging technologies.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card w-100 mb-3">
-          <img src="images\job portal img.webp" class="card-img-top" alt="job portal img">
-          <div class="card-body">
-            <h5 class="card-title text-center"><i class="bi bi-2-circle"></i>ONLINE JOB PORTAL</h5>
-            <p class="card-text">I done the project on creating online job portal site by using HTML,CSS.</p>
-          </div>
-        </div>
-      </div>
-            <div class="col-md-6">
-        <div class="card w-100 mb-3">
-          <img src="images\salesforce.png" class="card-img-top" alt="salesforce img">
-          <div class="card-body">
-            <h5 class="card-title text-center"><i class="bi bi-3-circle"></i>SALESFORCE ADMINISTRATOR</h5>
-            <p class="card-text">I did internship on salesforce administrator virtual program and also completed the salesforce trailhead modules.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card w-100 mb-3">
-          <img src="images\turbo generator.png" class="card-img-top" alt="turbo generator img">
-          <div class="card-body">
-            <h5 class="card-title text-center"><i class="bi bi-4-circle"></i>TURBO GENERATOR</h5>
-            <p class="card-text">I had done the project on turbo generator on various parts of the generator.</p>
-          </div>
-        </div>
-      </div>
+    </section>
 
+    <footer>
+      <p>Connect with me on:</p>
+      <a href="https://www.linkedin.com" class="me-3"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+      <p class="mt-3">&copy; 2025 M.V. Jaswanth</p>
+    </footer>
 
-
-    </div>
-  </div>
-</section>
-
-<section id="skills" data-aos="flip-right">
-  <div class="container">
-    <h1 class="text-center">Skills</h1>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card w-100 mb-4">
-          <img src="images\auto cad.jpeg" class="card-img-top" alt="auto cad">
-          <div class="card-body">
-            <h5 class="card-title">AUTOCAD DESIGNING</h5>
-            <p class="card-text">Designed a various electrical components which are used in PMCC panel board using autocad spftware.</p>
-          
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-4">
-        <div class="card w-100 mb-4">
-          <img src="images\plc ladder diag.png" class="card-img-top" alt="plc ladder diag">
-          <div class="card-body">
-            <h5 class="card-title">PLC LADDER DIAGRAMS</h5>
-            <p class="card-text">I had design ladder diagrams on applications of pneumatics and hydrallics,</p>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card w-100 mb-4">
-          <img src="images\html img.jpg" class="card-img-top" alt="html logo">
-          <div class="card-body">
-            <h5 class="card-title">BASICS OF HTML</h5>
-            <p class="card-text">Understand about the basics skills in HTML.</p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-  </div>
-</section>
-
-<section id="contact" data-aos="flip-up">
-  <div class="container-fluid">
-    <h1 class="text-center">contact with me</h1>
-
-    <div class="row">
-      <div class="col-md-6">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30798.651465459297!2d79.87785790547518!3d15.222388511802375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b128f9b2f24f3%3A0x6f100fd487f5f0d7!2sKandukur%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1687496816454!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      
-      <div class="col-md-6">
-        <form>
-          <div class="mb-3">
-            <label for="fullName" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Full Name">
-          </div>
-          <div class="mb-3">
-            <label for="emailInput" class="form-label">Email Address</label>
-            <input type="tel" class="form-control" id="emailInput" placeholder="Enter Your Email Address">
-          </div>
-          <div class="mb-3">
-            <label for="teleInput" class="form-label">Contact Number</label>
-            <input type="email" class="form-control" id="emailInput" placeholder="Enter Your contact Number">
-          </div>
-          <div class="mb-3">
-            <label for="textArea" class="form-label">Enter Your Query Here</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Your Query Here"></textarea>
-          </div>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section> 
-
-<footer id="footer">
-  <div class="container-fluid bg-dark py-2">
-    <div class="mt-4 text-center px-1">
-      <a href="http://www.fb.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook bIcon"></i></a>
-      <a href="http://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin bIcon"></i></a>
-      <a href="http://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram bIcon"></i></a>
-    </div>
-
-    
-  </div>
-</footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
