@@ -9,14 +9,15 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-      body, html { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+      body, html { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; overflow-x: hidden; background-color: #f0f0f0; }
       .navbar { background-color: #333; padding: 1rem; transition: background-color 0.3s; }
       .navbar:hover { background-color: #555; }
       .banner { background: linear-gradient(to right, #6a11cb, #2575fc); color: #fff; padding: 100px 20px; text-align: center; }
-      .content-section { padding: 60px 20px; }
+      .content-section { padding: 60px 20px; background-color: #fff; margin-bottom: 20px; border-radius: 10px; }
       .section-title { font-size: 2rem; color: #333; margin-bottom: 1.5rem; text-align: center; font-weight: 600; }
       .card { box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s; }
       .card:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); }
+      .card-img-top { height: 150px; object-fit: cover; }
       footer { background-color: #333; color: #fff; padding: 20px 0; text-align: center; }
       footer a { color: #ffd700; margin: 0 10px; font-size: 1.5rem; }
     </style>
@@ -48,22 +49,56 @@
 
     <section class="content-section" id="about">
       <h2 class="section-title">About Me</h2>
+      <img src="images/profile.jpg" alt="Profile" class="img-fluid mb-3 rounded-circle" width="150">
       <p>I am pursuing B.Tech in Electrical and Electronics Engineering at Prakasam Engineering College. I completed my intermediate education at Narayana Junior College and schooling at Narayana E-techno School.</p>
     </section>
 
     <section class="content-section" id="projects">
       <h2 class="section-title">Projects/Internships</h2>
-      <p>1. Electric Vehicles - Internship at HIEE Company, Hyderabad.</p>
-      <p>2. Online Job Portal - Web development project using HTML and CSS.</p>
-      <p>3. Salesforce Administrator - Completed Salesforce Trailhead modules and virtual internship.</p>
-      <p>4. Turbo Generator - Analysis and study on various parts of a turbo generator.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <img src="images/ev_image.webp" class="card-img-top" alt="Electric Vehicles">
+            <div class="card-body">
+              <h5 class="card-title">Electric Vehicles Internship</h5>
+              <p>Completed internship at HIEE Company, Hyderabad, focusing on various types of electric vehicles.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <img src="images/job_portal_img.webp" class="card-img-top" alt="Job Portal">
+            <div class="card-body">
+              <h5 class="card-title">Online Job Portal</h5>
+              <p>Developed a web portal using HTML and CSS for job postings and applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="content-section" id="skills">
       <h2 class="section-title">Skills</h2>
-      <p>AUTOCAD DESIGNING: Designed various electrical components using AutoCAD software.</p>
-      <p>PLC LADDER DIAGRAMS: Developed ladder diagrams for pneumatic and hydraulic systems.</p>
-      <p>HTML Basics: Basic understanding of HTML and CSS for web development.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="images/auto_cad.jpeg" class="card-img-top" alt="AutoCAD">
+            <div class="card-body">
+              <h5 class="card-title">AUTOCAD DESIGNING</h5>
+              <p>Designed various electrical components for PMCC panels using AutoCAD.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="images/plc_ladder_diag.png" class="card-img-top" alt="PLC Ladder">
+            <div class="card-body">
+              <h5 class="card-title">PLC LADDER DIAGRAMS</h5>
+              <p>Designed ladder diagrams for pneumatic and hydraulic systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="content-section" id="contact">
